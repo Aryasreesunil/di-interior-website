@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Works</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- NAVBAR (same) -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="images/logo2.png" class="nav-logo">
+      <span class="brand-name"> Di INTERIOR</span>
+    </div>
+    <div class="nav-icons">
+      <a href="index.html"><img src="images/icons8-home-50.svg"></a>
+      <a href="gallery.html" class="active">
+      <img src="images/icons8-search-50.svg" alt="Search">
+      </a>
+
+      <a href="contact.html"><img src="images/icons8-contacts-50.svg"></a>
+    </div>
+  </nav>
+  </body>
+  </html>
+  <section class="page-section">
+  <h1>Partition wall</h1>
+  <div class="work-grid">
+    <img src="images/partition/p1.jpeg" alt="Kitchen design" onclick="openLightbox(this)">
+    <img src="images/partition/p2.jpeg" alt="Kitchen design" onclick="openLightbox(this)">
+    <img src="images/partition/p3.jpeg" alt="Kitchen design" onclick="openLightbox(this)">
+    
+   </div>
+</section>
+
+<!-- LIGHTBOX -->
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <div class="lightbox-inner" onclick="event.stopPropagation()">
+    <button class="lightbox-close" onclick="closeLightbox()">×</button>
+    <img id="lightbox-img">
+  </div>
+</div>
+
+<script>
+  function openLightbox(img) {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    lightboxImg.src = img.src;
+    lightbox.classList.add("active");
+  }
+
+  function closeLightbox() {
+    document.getElementById("lightbox").classList.remove("active");
+  }
+</script>
+
+</body>
+</html>

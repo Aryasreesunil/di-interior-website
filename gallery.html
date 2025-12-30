@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Works</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- NAVBAR (same) -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="images/logo2.png" class="nav-logo">
+      <span class="brand-name"> Di INTERIOR</span>
+    </div>
+    <div class="nav-icons">
+      <a href="index.html"><img src="images/icons8-home-50.svg"></a>
+      <a href="gallery.html" class="active">
+      <img src="images/icons8-search-50.svg" alt="Search">
+      </a>
+
+      <a href="contact.html"><img src="images/icons8-contacts-50.svg"></a>
+    </div>
+  </nav>
+  <!-- CONTENT -->
+   <!-- SEARCH BAR -->
+<div class="search-wrapper">
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="Search designs..."
+  />
+</div>
+
+<!-- alteranate-->
+<section
+  class="category-section alt"
+  data-search="kitchen kitchen-design modular-kitchen modern-kitchen kitchen-interior kitchen-cabinets">
+
+
+  <div class="category-images">
+    <div class="cat-img large">
+      <img src="images/kitchen/k1.jpg" alt="Kitchen Design">
+    </div>
+
+    <div class="cat-img-row">
+      <div class="cat-img small">
+        <img src="images/kitchen/k2.jpg" alt="">
+      </div>
+      <div class="cat-img small">
+        <img src="images/kitchen/k3.jpg" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="category-content">
+    <h2>Kitchen</h2>
+    <h4>DESIGNS</h4>
+
+    <p>
+      We believe the kitchen is more than a workspace; it is the heart of the home.
+      
+    </p>
+  </div>
+
+  <div class="category-action">
+    <a href="kitchen.html" class="explore-btn">Explore</a>
+  </div>
+
+</section>
+<!-- reverse-->
+ <section class="category-section reverse" data-search="bed bedstead bed-design bedroom-bed wooden-bed bed-interior furniture"
+>
+
+  <div class="category-images">
+    <div class="cat-img large">
+      <img src="images/bedroom/AQUA BAY SKY RESIDENCES - BEDROOM - Trieu Nhung (NT Studio).jpg" alt="Bedroom Design">
+    </div>
+
+    <div class="cat-img-row">
+      <div class="cat-img small">
+        <img src="images/bedroom/wgrf.jpg">
+      </div>
+      <div class="cat-img small">
+        <img src="images/bedroom/Elegant Bedroom Design with Cozy Window Seater & Modern Furnishings.jpg">
+      </div>
+    </div>
+  </div>
+
+  <div class="category-content">
+
+    <h2>Bed stead</h2>
+    <h4>DESIGNS</h4>
+
+    <p>
+      Bedrooms are personal sanctuaries. Our designs focus on comfort,
+      
+    </p>
+   </div>
+   <div class="category-action">
+    <a href="bedstead.html" class="explore-btn">Explore</a>
+  </div>
+</section>
+<!----->
+<!-- alteranate-->
+<section class="category-section alt" data-search="partition partition-wall room-divider wooden-partition glass-partition interior-partition"
+>
+
+  <div class="category-images">
+    <div class="cat-img large">
+      <img src="images/pw1.png" alt="partition Design">
+    </div>
+
+    <div class="cat-img-row">
+      <div class="cat-img small">
+        <img src="images/pw2.jpg" alt="">
+      </div>
+      <div class="cat-img small">
+        <img src="images/pw3.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="category-content"data-search="partition partition-wall room-divider wooden-partition glass-partition interior-partition"
+>
+    <h2>Partition Wall</h2>
+    <h4>DESIGNS</h4>
+
+    <p>
+      We transform partition walls into stunning design statements that redefine how spaces connect and flow. Our partitions go beyond separation — they create harmony between openness and privacy.
+   </p>
+   </div>
+   <div class="category-action">
+    <a href="partition.html" class="explore-btn">Explore</a>
+  </div>
+
+</section>
+<!-- reverse-->
+ <section class="category-section reverse" data-search="wash-basin basin-area vanity mirror wash-area bathroom-interior sink"
+>
+
+  <div class="category-images">
+    <div class="cat-img large">
+      <img src="images/wb1.jpg" alt="Bedroom Design">
+    </div>
+
+    <div class="cat-img-row">
+      <div class="cat-img small">
+        <img src="images/wb2.jpg">
+      </div>
+      <div class="cat-img small">
+        <img src="images/wb3.png">
+      </div>
+    </div>
+  </div>
+
+  <div class="category-content">
+
+    <h2>Wash Basin Area</h2>
+    <h4>DESIGNS</h4>
+
+    <p>
+      We turn wash basin areas into refined focal points that blend elegance with everyday function. Our designs emphasize subtle sophistication by pairing premium materials, ambient lighting, and sleek fixtures.
+
+ </p>
+    
+  </div>
+
+  <div class="category-action">
+    <a href="wash.html" class="explore-btn">Explore</a>
+  </div>
+</section>
+<!----->
+
+<!----->
+<script>
+  const searchInput = document.getElementById("searchInput");
+  const sections = document.querySelectorAll(".category-section");
+
+  searchInput.addEventListener("keyup", function () {
+    const query = this.value.toLowerCase();
+
+    sections.forEach(section => {
+      const keywords = section.dataset.search.toLowerCase();
+
+      if (keywords.includes(query) || query === "") {
+  section.style.display = "";
+} else {
+  section.style.display = "none";
+}
+
+    });
+  });
+</script>
+
+</body>
+</html>
